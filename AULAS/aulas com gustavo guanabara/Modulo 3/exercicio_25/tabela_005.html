@@ -22,7 +22,7 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: rgba(33, 33, 34, 0.664);
             color: white;
         }
 
@@ -38,7 +38,7 @@
             font-size: 1.5em;
             font-weight: bold;
             padding: 10px;
-            background-color: lightgray;
+            background-color: rgba(221, 221, 221, 0.726);
         }
 
         #coluna_pop {
@@ -50,10 +50,21 @@
         todo tr que estiver dentro 
         de tbody, o primeiro tr colorido
         o segundo nao, o terceiro sim, o quarto nao assim em diante.
-        este é o efeito zebrado
-        podemos tambem colocor valores 3n, 4n, 5n...*/
+
+        iste é o efeito zebrado
+        podemos tambem colocor valores como:
+        
+        3n, 4n, 5n...odd (linhas impares), even (para linhas impares)... 
+        2n-1 para impar
+        2n para par*/
+
         tbody > tr:nth-child(2n) {
             background-color: lightgray;
+            font-weight:500;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: rgba(36, 35, 35, 0.404);
         }
         
 
