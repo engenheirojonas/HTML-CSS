@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframes</title>
+
+    <style>
+        iframe {
+            /*porque iframe é inline, margin com valor auto nao vai centralizar lhe.
+            por isso devemos primeiro fazer lhe display com valor block para lhe centralizar com margin auto*/
+            display: block;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
+    <H1>Teste com Iframes</H1>
     
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque inventore velit necessitatibus, sed quisquam error non aperiam! Accusamus saepe omnis totam eligendi non, culpa, blanditiis eveniet impedit, corporis nobis laudantium.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque inventore velit necessitatibus, sed quisquam error non aperiam! Accusamus saepe omnis totam eligendi non, culpa, blanditiis eveniet impedit, corporis nobis laudantium.
+    </p>
+
+        <!--carregando minhas proprias paginas ou paginas internas num iframe
+        -->
+    <iframe src="iframe_003b.html" frameborder="0" height="500" width="500"></iframe>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus rerum tempora ab blanditiis fugiat soluta eum sint veniam aspernatur dolorem delectus dicta sapiente suscipit iusto repudiandae ad architecto, optio unde.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus rerum tempora ab blanditiis fugiat soluta eum sint veniam aspernatur dolorem delectus dicta sapiente suscipit iusto repudiandae ad architecto, optio unde.
+    </p>
+
+    <iframe src="iframe_003c.html" frameborder="0" height="500" width="500"></iframe>
+
 </body>
 </html>
