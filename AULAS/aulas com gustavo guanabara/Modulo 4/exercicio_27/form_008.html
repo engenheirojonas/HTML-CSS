@@ -12,12 +12,12 @@
 </head>
 <body>
     <!-- 
-                
+           outros input     
     -->
     
     <h1>Controles de formularios</h1>
 
-    <form action="form_004-cadastro.php" method="get" autocomplete="on">
+    <form action="form_004-cadastro.php" method="post" autocomplete="on">
         <p>
             <!--cor padrao colocado por nós com atributo value-->
             <label for="id_cor">Cor:</label>
@@ -26,11 +26,19 @@
         </p>
         <p>
             
-            <!--min="1" max="5" value="2"-->
+            <!--os atributos:
+            min="1" max="5" value="2"-->
             <label for="id_nivel">Nivel de Satisfação</label>
             <input type="range" name="nivel" id="id_nivel" 
             
             min="1" max="5" value="2">
+        </p>
+
+        <!--Quando usammos o input do type file
+        devemos meter post como method da form-->
+        <p>
+            <label for="id_foto">Foto do Perfil</label>
+            <input type="file" name="foto" id="id_foto">
         </p>
         <p>
             <input type="submit" value="Enviar">
