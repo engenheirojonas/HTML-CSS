@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <Style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </Style>
+</head>
+<body>
+    <!-- LISTAS
+           Select   
+           datalist
+    -->
+    
+    <h1>Controles de formularios</h1>
+
+    <form action="form_004-cadastro.php" method="get" autocomplete="on">
+
+                <!-- 
+           Select   
+                 -->
+    
+        <p>
+            <label for="id_estado">Estado</label>
+            <select name="estado" id="id_estado">
+                <option value="Aoa">Angola</option>
+                <option value="RPC">Congo</option>
+                <option value="RDC">RDC</option>
+            </select>
+        </p>
+
+         <p>
+            <label for="id_estado">Estados do Mundo</label>
+            <select name="estado" id="id_estado">
+
+                <option value="" seleceted>---Escolha o estado----</option>
+
+                <optgroup label="Africra">
+                    <option value="Aoa">Angola</option>
+                    <option value="RPC">Congo</option>
+                    <option value="RDC">RDC</option>
+                </optgroup>
+
+                <optgroup label="Outros Continentes">
+                    <option value="Deutsch">Alemanhã</option>
+                    <option value="Mon">Monaco</option>
+                    <option value="EUA">EUA</option>
+                </optgroup>
+            </select>
+        </p>
+
+                <!-- 
+           datalist
+                -->
+        <p>
+            <label for="id_prof">Profissão</label>
+            <input type="text" name="prof" id="id_prof" list="listprof">
+            <datalist id="listprof">
+                <option value="adm">Administrador</option>
+                <option value="cont">Contabilista</option>
+                <option value="dev">Desenvolvedor</option>
+                <option value="prof">Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="id_prof">Profissão</label>
+            <input type="text" name="prof" id="id_prof" list="listprof2">
+            <datalist id="listprof2">
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+</body>
+</html>
