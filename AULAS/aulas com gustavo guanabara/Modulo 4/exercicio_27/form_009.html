@@ -12,13 +12,20 @@
 </head>
 <body>
     <!-- LISTAS
-           Select   
+
+           Select
+                mostra uma lista definitivo de items,  listado apenas pelo programador
+
            datalist
+                mostra uma lista definitivo de items, que pode incluir tambem items inseridos pelo proprio usuario
+            
+            Mensagem
+                permite ao usuario inserir ou digitar textos
     -->
     
     <h1>Controles de formularios</h1>
 
-    <form action="form_004-cadastro.php" method="get" autocomplete="on">
+    <form action="form_004-cadastro.php" method="post" autocomplete="on">
 
                 <!-- 
            Select   
@@ -34,8 +41,8 @@
         </p>
 
          <p>
-            <label for="id_estado">Estados do Mundo</label>
-            <select name="estado" id="id_estado">
+            <label for="id_estado2">Estados do Mundo</label>
+            <select name="estado" id="id_estado2">
 
                 <option value="" seleceted>---Escolha o estado----</option>
 
@@ -68,14 +75,26 @@
         </p>
 
         <p>
-            <label for="id_prof">Profissão</label>
-            <input type="text" name="prof" id="id_prof" list="listprof2">
+            <label for="id_prof2">Profissão</label>
+            <input type="text" name="prof" id="id_prof2" list="listprof2">
             <datalist id="listprof2">
                 <option>Administrador</option>
                 <option>Contabilista</option>
                 <option>Desenvolvedor</option>
                 <option>Professor</option>
             </datalist>
+        </p>
+
+                 <!-- 
+           Msg (Mensagens)
+                    para usarmos a tag "textarea" devemos usat o method "post" no form, para nao ter limitaçoes, pois o method "get" só aceita 3000 bits.
+                    
+                    o atributo "cols" do elemento ou tag "textarea" mostra numero de cararcter antes de quebrar de linha consoante o usuario vai digitando
+           -->
+
+        <p>
+            <label for="id_msg">Mensagem</label><br>
+            <textarea name="msg" id="id_msg" cols="30" rows="10"></textarea>
         </p>
 
 
