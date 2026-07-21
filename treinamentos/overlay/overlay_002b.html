@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay TEXT</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(44, 168, 168);
+        }
+
+        #container {
+            position: relative;
+            font-size: 20px;
+            color: white;
+            background-image: url(image1.png);
+            background-position: center center;
+            background-attachment: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+            width: 200PX;
+        }
+
+        #overlay {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background-color: rgba(238, 8, 8, 0.164);
+            cursor: pointer;
+        }
+
+        button {
+            background-color: green;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            padding: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" onclick="off()">
+        <div id="overlay">
+            Subscribe sejam bem vindo
+        </div>
+    </div>
+    <div>
+        <button onclick="on()">Click Me!</button>
+    </div>
+
+
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block"
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none"
+        }
+    </script>
+</body>
+</html>

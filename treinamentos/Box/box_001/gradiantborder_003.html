@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Border</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0e2136;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: #14264a;
+            height: 200px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @property --deg {
+            syntax: '<angle>';
+                inherits: true;
+                initial-value: 0deg;
+        }
+
+        .box::before,
+        .box::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: conic-gradient(
+                from var(--deg) at center,
+                #00c3ff,
+                #630199,
+                #6300c6,
+                #6b80be );
+            border-radius: inherit;
+            z-index: -2;
+            padding: 2px;
+            animation: autorotate 2s linear infinite;
+        }
+
+        .box::after {
+            filter: blur(10px);
+        }
+
+        @keyframes autorotate {
+            to {
+                --deg: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+
+
+
+<!--Modern CSS Border & Box Shadow Gradient Effect _ Old vs New Design-->

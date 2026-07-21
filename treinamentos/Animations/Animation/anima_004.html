@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STyle>
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            background: #000;
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            animation: img 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes img {
+            0% {
+                background: #0000ff;
+            }
+            20% {
+                border-radius: 50% 0 0 0;
+                background: #228b22;
+                transform: rotate(-25deg);
+            }
+            50% {
+                border-radius: 50% 50% 0 0;
+                background: #ff00ff;
+                transform: rotate(25deg);
+            }
+            60% {
+                background: #00ffff;
+            }
+            80% {
+                background: #ffff00;
+                border-radius: 50% 50% 50% 0;
+                transform: rotate(-25deg);
+            }
+            100% {
+                background: #ff0000;
+                border-radius: 50%;
+            }
+        }
+
+    </STyle>
+</head>
+<body>
+    <div class="image"></div>
+</body>
+</html>
+
+
+
+<!--Como fazer Animação _ Html e Css-->

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar Menu</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #111;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #222;
+            color: white;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #00c8ff;
+            border-radius: 4px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: #333;
+            top: 40px;
+            min-width: 150px;
+        }
+
+        .dropdown-menu li {
+            display: block;
+        }
+
+        .dropdow:hover .dropdown-menu{
+            display: block;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .nav-links li {
+            text-align: center;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Coding</div>
+        <ul class="nav-links ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdow"><a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Html Projects</a></li>
+                    <li><a href="#">Css Projects</a></li>
+                    <li><a href="#">JavaScript Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li></ul>
+
+        <div class="menu-toggle">Menu</div>
+    </nav>
+</body>
+</html>
+
+
+<!--🔥Modern Navbar with Dropdown Menu #webdevelopment #coding #htmlcss-->

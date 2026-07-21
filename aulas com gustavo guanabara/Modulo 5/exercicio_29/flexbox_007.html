@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <StyLe>
+
+        /*FLEX BOX
+
+                 CONTAINER
+
+            Diferenciais
+
+         justify-content
+            vai alinhar o conteudo ou os items dentro do eixo principal
+
+         align-items
+            ai alinhar o conteudo ou os items dentro do eixo transversal
+
+         align-content
+            vai alinhar os items ou elemntos no eixo transversal mas só quando eles estiverem empacotados
+                
+                valores
+                
+                    stretch: 
+                        é o valor padrao. ve a ilustraçao nas imagens flexbox_007a e flexbox_007b
+                    
+                    flex-start
+                    
+                    flex-end
+                    
+                    center
+                    
+                    space-between
+                    
+                    space-evenly
+                        (o melhor pra se usar)      
+
+                    space-around
+                        (funuciona tipo stretch mas só centralizar)   
+        */
+       
+        div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            
+            /*atencçao: o align-content só funciona quando o a propriedade flex-flow conter "wrap" como umdos valores*/
+            align-content: space-evenly; /* center, space-evenly, space-around, ... */
+
+            height: 400px;
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+
+            
+        }
+        
+    </StyLe>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">H</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+</body>
+</html>

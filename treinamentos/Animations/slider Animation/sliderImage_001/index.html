@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing image animation</title>
+    <style>
+
+        .img {
+            width: 200px;
+            height: 100px;
+            background-size: 100% 100%;
+            border-radius: 7px;
+            box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.088);
+            animation: animate 10s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                background-image: url(responsabiliddade.png);
+            }
+            25% {
+                background-image: url(imagem3.jpg);
+            }
+            50% {
+                background-image: url(favorite-bird-4_littleImage.jpg);
+            }
+            75% {
+                background-image: url(background001.jpg);
+            }
+            100% {
+                background-image: url(wallpaper003.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+</body>
+</html>
+
+
+<!--Changing Images Animation pure CSS _ FiltersChange image on hover _ CSS animatio-->

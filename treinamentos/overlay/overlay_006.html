@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css - overlay</title>
+    <link rel="stylesheet" href="overlay_006.css">
+    <style>
+        .image-card {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+
+        }
+
+        .image-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /*a intensidade da opacidade*/
+            backdrop-filter: blur(2px);
+            background: rgb(0, 0, 0, 0.2);
+            opacity: 0;
+        }
+
+        .image-card:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="image-card">
+            <img src="image1.png" alt="imagem">
+            <div class="overlay">
+                <div>
+                    <h3 >olá tudo bem?</h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

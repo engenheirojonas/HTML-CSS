@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Neon Radial</title>
+    <style>
+        .menu {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            margin: 150px auto;
+        }
+        #toggle {
+            display: none;
+        }
+        .menu label:hover {
+            transform: rotate(90deg);
+        }
+        .menu label {
+            width: 70px;
+            height: 70px;
+            background: #ff3c78;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+            transition: 0.4s;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .menu a {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #00d2ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.2);
+        }
+
+        #toggle:checked ~ a:nth-child(2) {
+            transform: translate(0,-100px); opacity: 1;
+        }
+
+        #toggle:checked ~ a:nth-child(3) {
+            transform: translate(86px,-50px); opacity: 1;
+        }
+
+        #toggle:checked ~ a:nth-child(4) {
+            transform: translate(86px,50px); opacity: 1;
+        }
+
+        #toggle:checked ~ a:nth-child(5) {
+            transform: translate(0,100px); opacity: 1;
+        }
+
+        #toggle:checked ~ a:nth-child(6) {
+            transform: translate(-86px,50px); opacity: 1;
+        }
+
+        #toggle:checked ~ a:nth-child(7) {
+            transform: translate(-86px,-50px); opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <input type="checkbox" name="" id="toggle">
+        <label for="toggle">+</label>
+        <a href="#">Home</a>
+        <a href="#">Account</a>
+        <a href="#">Photo</a>
+        <a href="#">Selfie</a>
+        <a href="#">Coração</a>
+    </div>
+</body>
+</html>
+
+
+<!--Mini Neon Radial Menu Animation Using HTML & CSS Only-->

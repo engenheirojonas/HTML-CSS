@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Image Animation</title>
+    <style>
+        .div {
+            margin: 6rem 12rem;
+            height: 20rem;
+            width: 36rem;
+            background-size: 100% 100%;
+            box-shadow: 20px 20px 10px gray;
+            animation: slider 10s linear infinite;
+        }
+
+        @keyframes slider {
+            0% {
+                background-image: url(background001.jpg);}
+            10% {
+                background-image: url(favorite-bird-4_littleImage.jpg);
+            }
+            60% {
+                background-image: url(imagem3.jpg);
+            }
+            80% {
+                background-image: url(responsabiliddade.png);
+            }
+            100% {
+                background-image: url(wallpaper003.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+</body>
+</html>
+
+
+
+<!-----Image slider Animation using HTML and CSS-->

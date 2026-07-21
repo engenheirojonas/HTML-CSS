@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <StyLe>
+
+        /*FLEX BOX
+
+                 ITEMS 
+            (conteudos ou filhos)
+
+            propriedades aplicadas aos ITEMS FLEXIVEIS
+                - ORDER
+                - ALIGN-SELF
+            
+            porem, por padrao os items nao sao flexiveis. mas é possivel dar-lhes uma flexibilizaçao
+
+            ORDER
+                todo item dentro do container tem por padrao "0" como valor padrao para a propriedade ORDER
+
+                    Mas para usar esta propriedade essa propriedade Order Com valores
+                    diferentes 
+                    por exemplo
+                    No lugar de zero:
+                    3 no primeiro elemento item
+                    5 no segundo elemento item
+                    - 2 no terceiro elemento e no
+                    0 no ultimo
+
+                    o próprio CSS ele vai reordenar para que esses números fiquem em ordem crescente então números negativos vão vir antes e números positivos vão vir depois do zero
+
+                nisso podemos mudar a ordem dos blocos (colocar menu em cima ou em baixo...)
+
+            ALIGN-SELF
+                cada um dos items vai ter um alinhamento diferente.
+                e isso funciona no cross-axis (alinhamento transversal)
+
+                    Valores
+                        auto
+                            vai herdar a caracteristica de alinhamento vertical do seu pai(container)
+                        flex-start
+                            é o alinhamento perto do cross-start
+                        flex-end
+                            é o alinhamento colado perto do cross-end
+                        center
+                            vai calcular o centro partinco do cross-start ao cross-end
+                        stretch
+                            vai ocupar o espaço inteiro do eixo(hauteur) transversal
+        
+            
+        */
+
+     
+        div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        div#i1 {
+            order: 0;
+        }
+
+        div#i2 {
+            order: -2;
+        }
+        div#i3 {
+            order: 4;
+        }
+        div#i4 {
+            order: 8;
+        }
+        div#i5 {
+            order: 2;
+        }
+        div#i6 {
+            order: 0;
+        }
+        div#i7 {
+            order: -4;
+        }
+        
+
+    </StyLe>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+</body>
+</html>
